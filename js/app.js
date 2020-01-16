@@ -9,7 +9,7 @@ while((userName==="") || (userName === null)){
 }
 
 /* MESSAGE - start the quiz */
-alert("Hi " + userName +"! Welcome to my site. \n\n Let's take a quiz and see how well you know Cassy...") 
+alert("Hi " + userName +"! Welcome to my site. \n\n Let's take a quiz and see how well you know Cassy... \n\n (You can submit answers by typing: yes/no -or- true/false") 
 
 
 /* QUIZ - CORRECT AMOUNT */
