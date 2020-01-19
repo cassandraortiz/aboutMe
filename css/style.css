@@ -64,11 +64,11 @@ h3{
     background-color: rgb(79,32,165);
     color: whitesmoke;
     text-align: center;
-    margin-bottom: 5px;
     box-shadow: 0px 0px 0px px rgba(0,0,0,0.30);   
 }
 
 p{
+    margin-top: 5px;
     font-size: 16px;
     font-style: normal;
     padding: 10px 30px 15px 50px;
@@ -105,3 +105,34 @@ li{
 
 
 
+.stadiumNote{
+    font-size: 14px;
+    align-items: center;
+    padding: 8px;
+    background-color: rgba(79,32,165,.35);
+    color: whitesmoke;
+    text-align: left;
+    margin-top: 0px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
+}
+
+.topTen{
+    margin-top: 10px;
+    list-style-type: decimal;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 25%;
+}
+
+.sideNote{
+    font-size: 12px;
+    align-items: center;
+    font-style: italic;
+    padding: 8px;
+    border: 2px rgb(77, 88, 167) solid;
+    background-color: rgb(77, 88, 167);
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 0px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
+}

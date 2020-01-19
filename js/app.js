@@ -1,4 +1,5 @@
 'use strict';
+/*
 
 /* WELCOME MESSAGE - ask for Name */
 var userName = prompt("Hello Friend, Welcome to my site!\n What is your name?");
@@ -57,22 +58,23 @@ if((question2.toLowerCase() ==='yes') || (question2.toLowerCase() ==='true')){
 
 /* QUESTION #3
 -------------------------------*/
-var question3 = prompt("QUESTION 3:\n Cassy has more than 50 first cousins");
-console.log("Question3: Cassy has more than 50 first cousins");
+var question3 = prompt("QUESTION 3:\n Cassy was once arrested for public intoxication in college.");
+console.log("Question3: Cassy was once arrested for public intoxication in college.");
 
 while((question3==="") || (question3 === null)){
-    question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy has more than 50 first cousins.");
+    question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
 }
 
 if((question3.toLowerCase() ==='yes') || (question3.toLowerCase() ==='true')){
-    console.log("Answer3: CORRECT");
-    alert("CORRECT!\n She has 51 first cousins!! 28 on mom's side, and 23 on her dad's side.");
-    final = final +1;
-} else if((question3.toLowerCase() ==='no') || (question3.toLowerCase() ==='false')){
     console.log("Answer3: WRONG");
-    alert("WRONG!\n She has 51 first cousins!!");
+    alert("WRONG!\n She may be a little wild at times, but she has never been arrested!");
+    
+} else if((question3.toLowerCase() ==='no') || (question3.toLowerCase() ==='false')){
+    console.log("Answer3: CORRECT");
+    alert("CORRECT!\n She may be a little wild at times, but she has never been arrested!");
+    final = final +1;
 } else {
-        question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy has more than 50 first cousins");
+        question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
 }
 
 /* QUESTION #4
@@ -114,6 +116,99 @@ if((question5.toLowerCase() ==='yes') || (question5.toLowerCase() ==='true')){
     alert("WRONG!\n Making people scream brings her joy!");
 } else {
     question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people");
+} 
+
+
+/* QUESTION #6 - Guessing Game
+------------------------------------*/
+var response;
+console.log("Question6: How many cousins does Cassy have?");
+var result;
+
+for (var x=1; x<5; x++){
+
+    var guess = prompt("ATTEMPT #" + x + " of 4 :\n How many cousins does Cassy have?");
+
+    while(isNaN(guess)){
+        guess = prompt("PLEASE ENTER A NUMBER:\n How many cousins does Cassy have?");
+        result = 'User did not guess the answer.'
+    }
+    if (x===4){
+        response = alert("I'm sorry, you have ran out of chances...\n\n The correct answer was 51.")
+    } else if (guess<20){
+        response = alert('Your guess is WAY too low...');
+    } else if (guess <51){
+        response = alert('You are getting warmer ...');
+    } else if (guess > 51){
+        response = alert('Wow thats a lot, not that many!');
+    } else if (guess = 51){
+        response = alert("YOU GUESSED IT in " + x + " ATTEMPS!!!\n She has 51 first cousins!! 28 on mom's side, and 23 on her dad's side.");
+        final = final +1;
+        result = 'User guessed the answer in ' + x + 'attempts.'
+        break;
+    }
 }
 
-var grade = alert('So '+ userName + ', You know: ' + (final*20) + '% about Cassy!! \n You got ' + final + '/5 correct.');
+console.log("Answer6: " + result);
+
+
+/* QUESTION #7 - Guessing the Name
+------------------------------------*/
+var siblings = ["Gina", "Jimmy", "Juanita", "Raymond", "Rosie", "Donny", "Eddie", "Mary", "Tanya", "Dee"];
+var userGuessNames = [];
+var a = 0;
+var nameResult = "";
+
+console.log("Index Length: " + siblings.length);
+
+for (var y = 1; y < 7; y++) {
+    console.log("ATTEMPT #" + y);
+    var guessName = prompt("QUESTION#7\nATTEMPT #" + y + " of 6 :\n My mom has 10 siblings, can you guess any of their names?");
+
+    while ((guessName === "") || (guessName === null)) {
+        guessName = prompt("Please submit an answer: \n Cassy's mom has 10 siblings, can you guess any of their names?");
+    }
+
+    var usersGuess = guessName;
+    var searchName = guessName.toLowerCase();
+
+
+    if (nameResult !== "") {
+        break;
+    } else if (y === 6) {
+        alert("I'm sorry, you have ran out of chances...\n\n You guess: " + userGuessNames + "\n\n The correct answers were: \n" + siblings);
+        nameResult = "User guess a name correctly.";
+        break;
+    }
+
+    console.log("Attempt#: " + y);
+    console.log("User Guessed: " + usersGuess);
+
+    var answer = false;
+
+
+    for (var i = 0; i < siblings.length; i++) {
+        
+        var lkupName = siblings[i].toLowerCase();
+
+        if (searchName === lkupName) {
+            answer = true;
+            break;
+        }
+    }
+
+    if (answer){
+        alert("Wow, You guessed " + usersGuess + " in " + y + " attempts!!!\n\n Here is a list of ALL her siblings:\n" + siblings);
+            nameResult = "User Guessed Correctly";
+            final = final + 1;
+            break;
+    } else{
+        alert("Nope Sorry, that is not correct! You now have: " + (6 - y) + " attempts left!");
+    }
+}
+
+console.log("Result: " + nameResult);
+
+/* FINAL GRADE
+------------------------------------*/
+var grade = alert('So '+ userName + ', You know: ' + (final*(100/7)).toFixed(0) + '% about Cassy!! \n You got ' + final + '/7 correct.')
