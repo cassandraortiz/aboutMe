@@ -5,10 +5,13 @@
    https://ephraimjoseph.com/ (#15158F, #4D53B3, #6F7BC5, #FFFEFB, #C3D4EE)
 */
 
+
+/* Overall site (default) Font/background color*/
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:#FFFEFB;
 }
+
 header{
     background-color: rgb(79,32,165);
     color: white;
@@ -19,6 +22,11 @@ header{
     text-align: center;
 }
 
+
+/* -----------------------------------
+/ Left Section of website 
+/ Includes: #HdrList - Nav .link - topTen list 
+/----------------------------------------*/
 .sectionImage{
     width: 50%;
     height: 25%;
@@ -27,25 +35,81 @@ header{
     margin-bottom: 0px;
     box-shadow: 2px 2px 7px 1px rgba(32,45,165,0.47);
     float: left;
-}
+}   
+    /* --------------------------------------------------- 
+    / Below elements are all contained in Section: sectionImage */
+    #hdrList{
+        font-style: italic;
+        font-size: 20px;
+        align-items: center;
+        background-color: rgb(79,32,165);
+        color: whitesmoke;
+        text-align: center;
+    }
 
-.mainPic{
-    opacity: 40%;
-    width: 100%;
-    height: 50%;
-}
+    nav{
+        list-style-type: none;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        border-style: solid;
+        border-color: rgba(77, 88, 167, 1);
+    }
 
-#hdrList{
-    font-style: italic;
-    font-size: 20px;
-    align-items: center;
-    background-color: rgb(79,32,165);
-    color: whitesmoke;
-    text-align: center;
-}
+    .link{ /* nav bar <p> link elements*/
+        width: 100%;
+        color: rgb(77, 88, 167);
+        font-size: 18px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 5px;
+    }
 
+    .mainPic{
+        opacity: 40%;
+        width: 100%;
+        height: 50%;
+    }
 
+    /* Start of my Top Ten Lists Article
+    /----------------------------------------*/
+    .stadiumNote{
+        font-size: 14px;
+        align-items: center;
+        padding: 8px;
+        background-color: rgba(79,32,165,.35);
+        color: whitesmoke;
+        text-align: left;
+        margin-top: 0px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
+    }
+    
+    .topTen{
+        margin-top: 10px;
+        list-style-type: decimal;
+        text-align: left;
+        font-size: 14px;
+        padding-left: 25%;
+    }
+    
+    .sideNote{
+        font-size: 12px;
+        align-items: center;
+        font-style: italic;
+        padding: 8px;
+        border: 2px rgb(77, 88, 167) solid;
+        background-color: rgb(77, 88, 167);
+        color: whitesmoke;
+        text-align: center;
+        margin-top: 0px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
+    }
+/* Ends the Left Section of website
+---------------------------------------*/
 
+/* -----------------------------------
+/ Right Section of website (Includes all Bio Responses)
+----------------------------------------*/
 .sectionBio{
     width: 45%;
     float: right;
@@ -53,86 +117,40 @@ header{
     background-color: rgba(186, 193, 250, 0.47);
     margin-right: 20px;
 }
+    /* -----------------------------------
+    / Below is contained within my Section: sectionBio 
+    / - all sections are setup the same */
+    h3{
+        width: 100%;
+        font-style: italic;
+        font-size: 20px;
+        align-items: center;
+        height: 30px;
+        padding-top: 8px;
+        background-color: rgb(79,32,165);
+        color: whitesmoke;
+        text-align: center;
+        box-shadow: 0px 0px 0px px rgba(0,0,0,0.30);   
+    }
 
-h3{
-    width: 100%;
-    font-style: italic;
-    font-size: 20px;
-    align-items: center;
-    height: 30px;
-    padding-top: 8px;
-    background-color: rgb(79,32,165);
-    color: whitesmoke;
-    text-align: center;
-    box-shadow: 0px 0px 0px px rgba(0,0,0,0.30);   
-}
+    p{
+        margin-top: 5px;
+        font-size: 16px;
+        font-style: normal;
+        padding: 10px 30px 15px 50px;
+    }
 
-p{
-    margin-top: 5px;
-    font-size: 16px;
-    font-style: normal;
-    padding: 10px 30px 15px 50px;
-}
+    ul{
+        margin: 10px 30px 15px 75px;
+        list-style-type: circle;
+    }
 
-ul{
-    margin: 10px 30px 15px 75px;
-    list-style-type: circle;
-}
-
-nav{
-    list-style-type: none;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    border-style: solid;
-    border-color: rgba(77, 88, 167, 1);
-
-}
-
-li{
-    margin-bottom: 10px;
-}
-
-.link{
-    width: 100%;
-    color: rgb(77, 88, 167);
-    font-size: 18px;
-    font-weight: bolder;
-    text-align: center;
-    padding: 5px;
-}
+    li{
+        margin-bottom: 10px;
+    }
+/* Ends the Right Section of website
+---------------------------------------*/
 
 
 
 
-.stadiumNote{
-    font-size: 14px;
-    align-items: center;
-    padding: 8px;
-    background-color: rgba(79,32,165,.35);
-    color: whitesmoke;
-    text-align: left;
-    margin-top: 0px;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
-}
-
-.topTen{
-    margin-top: 10px;
-    list-style-type: decimal;
-    text-align: left;
-    font-size: 14px;
-    padding-left: 25%;
-}
-
-.sideNote{
-    font-size: 12px;
-    align-items: center;
-    font-style: italic;
-    padding: 8px;
-    border: 2px rgb(77, 88, 167) solid;
-    background-color: rgb(77, 88, 167);
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 0px;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30); 
-}

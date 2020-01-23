@@ -4,13 +4,13 @@
 
 This project is an About Me page, for the user to get to know ME, the owner.
 
-<!-- ## Getting Started
+## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+My site can be found on GitHub repository: [AboutMe](https://cassandraortiz.github.io/aboutMe/) `https://cassandraortiz.github.io/aboutMe/`
 
-### Prerequisites
+<!--### Prerequisites
 
-What things you need to install the software and how to install them
+I you will need javascript enabled on website to run code. 
 
 ```
 Give examples
@@ -89,8 +89,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * etc -->
 
 
-
-
+## Acknowledgments
 
 Used this page to help me apply css to the <p> within my class. [CSS Combinations](https://www.w3schools.com/css/css_combinators.asp)
 

@@ -130,12 +130,12 @@ for (var x=1; x<5; x++){
 
     /* WHile Loop - If answer isNotANumber - Forces Prompt */
     while(isNaN(guess)){
-        guess = prompt("PLEASE ENTER A NUMBER:\n How many cousins does Cassy have?");
+        guess = prompt("PLEASE ENTER A NUMBER:\n How many first cousins does Cassy have?");
         result = 'User did not guess the answer.'
     }
 
     if (x===4){ /* If Number of guesses were reached */
-        response = alert("I'm sorry, you have ran out of chances...\n\n The correct answer was 51.")
+        response = alert("I'm sorry, you have ran out of chances...\n\n The correct answer was 51 first cousins")
     } else if (guess<20){ /* Guess is WAY too Low */
         response = alert('Your guess is WAY too low...');
     } else if (guess <51){ /* Guess is still too Low */
@@ -143,7 +143,7 @@ for (var x=1; x<5; x++){
     } else if (guess > 51){/* Guess is too High */
         response = alert('Wow thats a lot, not that many!');
     } else if (guess = 51){ /* Guess is Just Right */
-        response = alert("YOU GUESSED IT in " + x + " ATTEMPS!!!\n She has 51 first cousins!! 28 on mom's side, and 23 on her dad's side.");
+        response = alert("YOU GUESSED IT in " + x + " ATTEMPS!!!\n She has 51 first cousins!!\n\n 28 on mom's side, and 23 on her dad's side.");
         correct++;
         result = 'User guessed the answer in ' + x + 'attempts.' /* Note for Console Log - can be commented out */
         break;
@@ -196,7 +196,7 @@ for (var y = 1; y < 7; y++) {
 
     /* If the answer WAS found (true) it alerts user - breaks the loop.  Else - lets know they were wrong */
     if (answer){
-        alert("Wow, You guessed " + guessName + " in " + y + " attempts!!!\n\n The correct answers were: \n" + siblings + "\n\n but really - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
+        alert("Wow, You guessed " + guessName + " in " + y + " attempts!!!\n\n Correct answers were: \n" + siblings + "\n\n but ACTUALLY - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
             nameResult = "User Guessed Correctly"; /* Note for Console Log - can be commented out */
             correct++;
             break;
