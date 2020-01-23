@@ -185,59 +185,63 @@ questSix();
 
 /* QUESTION #7 - Guessing the Name
 ------------------------------------*/
-var siblings = ["Marky", "Ricky", "Danny", "Terry", "Mikey", "Davey", "Timmy", "Tommy", "Joey", "Robby", "Johnny", "Brian"];
-var usersEntries = []; /* Array of User guesses */
-var a = 0; /* index of User guess Array */
-var nameResult = ""; /* Note for Console Log - can be commented out */
 
-console.log("Index Length: " + siblings.length);
+function questSeven() {
+    var siblings = ["Marky", "Ricky", "Danny", "Terry", "Mikey", "Davey", "Timmy", "Tommy", "Joey", "Robby", "Johnny", "Brian"];
+    var usersEntries = []; /* Array of User guesses */
+    var a = 0; /* index of User guess Array */
+    var nameResult = ""; /* Note for Console Log - can be commented out */
 
-/* Loops through the Number of Attempts Required  (6) */
-for (var y = 1; y < 7; y++) {
-    console.log("ATTEMPT #" + y);
+    console.log("Index Length: " + siblings.length);
 
-    var guessName = prompt("QUESTION7 | ATTEMPT #" + y + " of 6 :\n\n I have 12 big brothers, can you guess any of their names?");
+    /* Loops through the Number of Attempts Required  (6) */
+    for (var y = 1; y < 7; y++) {
+        console.log("ATTEMPT #" + y);
 
-    /* Force the user to answer the question - NO Blanks/Cancels */
-    while ((guessName === "") || (guessName === null)) {
-        guessName = prompt("Please submit an answer: \n Cassy has 12 big brothers, can you guess any of their names?");
-    }
+        var guessName = prompt("QUESTION7 | ATTEMPT #" + y + " of 6 :\n\n I have 12 big brothers, can you guess any of their names?");
 
-    /* Enters Users answer into the usersEntries Array - create console log */
-    usersEntries[a] = guessName;
-    a++;
-    console.log("User Guessed: " + guessName);
+        /* Force the user to answer the question - NO Blanks/Cancels */
+        while ((guessName === "") || (guessName === null)) {
+            guessName = prompt("Please submit an answer: \n Cassy has 12 big brothers, can you guess any of their names?");
+        }
 
-    /* If it's the 6th attempt, then alerts User and breaks code */
-    if (y === 6) {
-        alert("I'm sorry, you have ran out of chances...\n\n The correct answers were: \n" + siblings + "\n\n but really - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
-        nameResult = "User Did NOT guess a name correctly."; /* Note for Console Log - can be commented out */
-        break;
-    }
+        /* Enters Users answer into the usersEntries Array - create console log */
+        usersEntries[a] = guessName;
+        a++;
+        console.log("User Guessed: " + guessName);
 
-    var answer = false; /* boolean - set to false before entering loop - to see if answer was found */
-
-    /* Loops through all the siblings to see if it matches */
-    for (var i = 0; i < siblings.length; i++) {
-        if (guessName.toLowerCase() === siblings[i].toLowerCase()) {
-            answer = true;
+        /* If it's the 6th attempt, then alerts User and breaks code */
+        if (y === 6) {
+            alert("I'm sorry, you have ran out of chances...\n\n The correct answers were: \n" + siblings + "\n\n but really - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
+            nameResult = "User Did NOT guess a name correctly."; /* Note for Console Log - can be commented out */
             break;
+        }
+
+        var answer = false; /* boolean - set to false before entering loop - to see if answer was found */
+
+        /* Loops through all the siblings to see if it matches */
+        for (var i = 0; i < siblings.length; i++) {
+            if (guessName.toLowerCase() === siblings[i].toLowerCase()) {
+                answer = true;
+                break;
+            }
+        }
+
+        /* If the answer WAS found (true) it alerts user - breaks the loop.  Else - lets know they were wrong */
+        if (answer) {
+            alert("Wow, You guessed " + guessName + " in " + y + " attempts!!!\n\n Correct answers were: \n" + siblings + "\n\n but ACTUALLY - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
+            nameResult = "User Guessed Correctly"; /* Note for Console Log - can be commented out */
+            correct++;
+            break;
+        } else {
+            alert("Nope Sorry, that is not correct! You now have: " + (6 - y) + " attempts left!");
         }
     }
 
-    /* If the answer WAS found (true) it alerts user - breaks the loop.  Else - lets know they were wrong */
-    if (answer) {
-        alert("Wow, You guessed " + guessName + " in " + y + " attempts!!!\n\n Correct answers were: \n" + siblings + "\n\n but ACTUALLY - they are Matt Damon's brothers in Good Will Hunting.\n\nYou guessed: " + usersEntries);
-        nameResult = "User Guessed Correctly"; /* Note for Console Log - can be commented out */
-        correct++;
-        break;
-    } else {
-        alert("Nope Sorry, that is not correct! You now have: " + (6 - y) + " attempts left!");
-    }
+    console.log("Result: " + nameResult);
 }
 
-console.log("Result: " + nameResult);
-
+questSeven();
 /* FINAL GRADE
 ------------------------------------*/
 var grade = alert('So ' + userName + ', You know: ' + (correct * (100 / 7)).toFixed(0) + '% about Cassy!! \n You got ' + correct + '/7 correct.')
