@@ -43,119 +43,145 @@ questOne();
 
 /* QUESTION #2 - Cassy once won a Car!
 ----------------------------------------*/
-var question2 = prompt("QUESTION 2:\n Cassy once won a Car!");
-console.log("Question2: Cassy once won a Car!");
 
-while ((question2 === "") || (question2 === null)) {
-    question2 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy once won a Car!");
+function questTwo() {
+    var question2 = prompt("QUESTION 2:\n Cassy once won a Car!");
+    console.log("Question2: Cassy once won a Car!");
+
+    while ((question2 === "") || (question2 === null)) {
+        question2 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy once won a Car!");
+    }
+
+    if ((question2.toLowerCase() === 'yes') || (question2.toLowerCase() === 'true')) {
+        console.log("Answer2: CORRECT");
+        alert("CORRECT!\n She won a car at her post prom party.  Nothing Special, a used Ford Tempo - but still it was FREE!");
+        correct++;
+    } else if ((question2.toLowerCase() === 'no') || (question2.toLowerCase() === 'false')) {
+        console.log("Answer2: WRONG");
+        alert("WRONG!\n She won a car at her post prom party.");
+    } else {
+        question2 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy once won a Car!");
+    }
 }
 
-if ((question2.toLowerCase() === 'yes') || (question2.toLowerCase() === 'true')) {
-    console.log("Answer2: CORRECT");
-    alert("CORRECT!\n She won a car at her post prom party.  Nothing Special, a used Ford Tempo - but still it was FREE!");
-    correct++;
-} else if ((question2.toLowerCase() === 'no') || (question2.toLowerCase() === 'false')) {
-    console.log("Answer2: WRONG");
-    alert("WRONG!\n She won a car at her post prom party.");
-} else {
-    question2 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy once won a Car!");
-}
+questTwo();
 
 /* QUESTION #3 - Cassy was once arrested for public intoxication in college.
 ------------------------------------------------------------------------------*/
-var question3 = prompt("QUESTION 3:\n Cassy was once arrested for public intoxication in college.");
-console.log("Question3: Cassy was once arrested for public intoxication in college.");
 
-while ((question3 === "") || (question3 === null)) {
-    question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
+function questThree() {
+    var question3 = prompt("QUESTION 3:\n Cassy was once arrested for public intoxication in college.");
+    console.log("Question3: Cassy was once arrested for public intoxication in college.");
+
+    while ((question3 === "") || (question3 === null)) {
+        question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
+    }
+
+    if ((question3.toLowerCase() === 'yes') || (question3.toLowerCase() === 'true')) {
+        console.log("Answer3: WRONG");
+        alert("WRONG!\n She may be a little wild at times, but she has never been arrested!");
+
+    } else if ((question3.toLowerCase() === 'no') || (question3.toLowerCase() === 'false')) {
+        console.log("Answer3: CORRECT");
+        alert("CORRECT!\n She may be a little wild at times, but she has never been arrested!");
+        correct++;
+    } else {
+        question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
+    }
 }
 
-if ((question3.toLowerCase() === 'yes') || (question3.toLowerCase() === 'true')) {
-    console.log("Answer3: WRONG");
-    alert("WRONG!\n She may be a little wild at times, but she has never been arrested!");
-
-} else if ((question3.toLowerCase() === 'no') || (question3.toLowerCase() === 'false')) {
-    console.log("Answer3: CORRECT");
-    alert("CORRECT!\n She may be a little wild at times, but she has never been arrested!");
-    correct++;
-} else {
-    question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
-}
+questThree();
 
 /* QUESTION #4 - Cassy was once stuck in an elevator for 4-1/2 hours.
 ----------------------------------------------------------------------*/
-var question4 = prompt("QUESTION 4:\n Cassy was once stuck in an elevator for 4-1/2 hours.");
-console.log("Question4: Cassy was once stuck in an elevator for 4-1/2 hours.");
 
-while ((question4 === "") || (question4 === null)) {
-    question4 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once stuck in an elevator for 4-1/2 hours.");
+function questFour() {
+    var question4 = prompt("QUESTION 4:\n Cassy was once stuck in an elevator for 4-1/2 hours.");
+    console.log("Question4: Cassy was once stuck in an elevator for 4-1/2 hours.");
+
+    while ((question4 === "") || (question4 === null)) {
+        question4 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once stuck in an elevator for 4-1/2 hours.");
+    }
+
+    if ((question4.toLowerCase() === 'yes') || (question4.toLowerCase() === 'true')) {
+        console.log("Answer4: WRONG");
+        alert("WRONG!\n That has never happened to her.");
+    } else if ((question4.toLowerCase() === 'no') || (question4.toLowerCase() === 'false')) {
+        console.log("Answer4: CORRECT");
+        alert("CORRECT!\n She's had bad days, but not that bad!!");
+        correct++;
+    } else {
+        question4 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once stuck in an elevator for 4-1/2 hours.");
+    }
 }
 
-if ((question4.toLowerCase() === 'yes') || (question4.toLowerCase() === 'true')) {
-    console.log("Answer4: WRONG");
-    alert("WRONG!\n That has never happened to her.");
-} else if ((question4.toLowerCase() === 'no') || (question4.toLowerCase() === 'false')) {
-    console.log("Answer4: CORRECT");
-    alert("CORRECT!\n She's had bad days, but not that bad!!");
-    correct++;
-} else {
-    question4 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once stuck in an elevator for 4-1/2 hours.");
-}
+questFour();
 
 /* QUESTION #5 - Cassy gets her kicks out of scaring people
 -------------------------------------------------------------*/
-var question5 = prompt("QUESTION 5:\n Cassy gets her kicks out of scaring people.");
-console.log("Question5: Cassy gets her kicks out of scaring people.");
 
-while ((question5 === "") || (question5 === null)) {
-    question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people.");
+function questFive() {
+    var question5 = prompt("QUESTION 5:\n Cassy gets her kicks out of scaring people.");
+    console.log("Question5: Cassy gets her kicks out of scaring people.");
+
+    while ((question5 === "") || (question5 === null)) {
+        question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people.");
+    }
+
+    if ((question5.toLowerCase() === 'yes') || (question5.toLowerCase() === 'true')) {
+        console.log("Answer5: CORRECT");
+        alert("CORRECT!\n She loves to jump out and scare her husband and kids!");
+        correct++;
+    } else if ((question5.toLowerCase() === 'no') || (question5.toLowerCase() === 'false')) {
+        console.log("Answer5: WRONG");
+        alert("WRONG!\n Making people scream brings her joy!");
+    } else {
+        question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people");
+    }
 }
 
-if ((question5.toLowerCase() === 'yes') || (question5.toLowerCase() === 'true')) {
-    console.log("Answer5: CORRECT");
-    alert("CORRECT!\n She loves to jump out and scare her husband and kids!");
-    correct++;
-} else if ((question5.toLowerCase() === 'no') || (question5.toLowerCase() === 'false')) {
-    console.log("Answer5: WRONG");
-    alert("WRONG!\n Making people scream brings her joy!");
-} else {
-    question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people");
-}
+questFive();
+
 
 /* QUESTION #6 - Guessing Game
 ------------------------------------*/
-var response;
-console.log("Question6: How many cousins does Cassy have?");
-var result;
 
-/* Loops through attempts (4) */
-for (var x = 1; x < 5; x++) {
+function questSix() {
+    var response;
+    console.log("Question6: How many cousins does Cassy have?");
+    var result;
 
-    var guess = prompt("QUESTION 6 | ATTEMPT #" + x + " of 4 :\n How many cousins does Cassy have?");
+    /* Loops through attempts (4) */
+    for (var x = 1; x < 5; x++) {
 
-    /* WHile Loop - If answer isNotANumber - Forces Prompt */
-    while (isNaN(guess)) {
-        guess = prompt("PLEASE ENTER A NUMBER:\n How many first cousins does Cassy have?");
-        result = 'User did not guess the answer.'
+        var guess = prompt("QUESTION 6 | ATTEMPT #" + x + " of 4 :\n How many cousins does Cassy have?");
+
+        /* WHile Loop - If answer isNotANumber - Forces Prompt */
+        while (isNaN(guess)) {
+            guess = prompt("PLEASE ENTER A NUMBER:\n How many first cousins does Cassy have?");
+            result = 'User did not guess the answer.'
+        }
+
+        if (x === 4) { /* If Number of guesses were reached */
+            response = alert("I'm sorry, you have ran out of chances...\n\n The correct answer was 51 first cousins")
+        } else if (guess < 20) { /* Guess is WAY too Low */
+            response = alert('Your guess is WAY too low...');
+        } else if (guess < 51) { /* Guess is still too Low */
+            response = alert('You are getting warmer, but still too low...');
+        } else if (guess > 51) {/* Guess is too High */
+            response = alert('Wow thats a lot, not that many!');
+        } else if (guess = 51) { /* Guess is Just Right */
+            response = alert("YOU GUESSED IT in " + x + " ATTEMPS!!!\n She has 51 first cousins!!\n\n 28 on mom's side, and 23 on her dad's side.");
+            correct++;
+            result = 'User guessed the answer in ' + x + 'attempts.' /* Note for Console Log - can be commented out */
+            break;
+        }
     }
 
-    if (x === 4) { /* If Number of guesses were reached */
-        response = alert("I'm sorry, you have ran out of chances...\n\n The correct answer was 51 first cousins")
-    } else if (guess < 20) { /* Guess is WAY too Low */
-        response = alert('Your guess is WAY too low...');
-    } else if (guess < 51) { /* Guess is still too Low */
-        response = alert('You are getting warmer, but still too low...');
-    } else if (guess > 51) {/* Guess is too High */
-        response = alert('Wow thats a lot, not that many!');
-    } else if (guess = 51) { /* Guess is Just Right */
-        response = alert("YOU GUESSED IT in " + x + " ATTEMPS!!!\n She has 51 first cousins!!\n\n 28 on mom's side, and 23 on her dad's side.");
-        correct++;
-        result = 'User guessed the answer in ' + x + 'attempts.' /* Note for Console Log - can be commented out */
-        break;
-    }
+    console.log("Answer6: " + result);
 }
 
-console.log("Answer6: " + result);
+questSix();
 
 /* QUESTION #7 - Guessing the Name
 ------------------------------------*/
