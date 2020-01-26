@@ -30,7 +30,6 @@ header{
 .sectionImage{
     width: 50%;
     height: 25%;
-    margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 0px;
     box-shadow: 2px 2px 7px 1px rgba(32,45,165,0.47);
@@ -45,6 +44,7 @@ header{
         background-color: rgb(79,32,165);
         color: whitesmoke;
         text-align: center;
+        margin-top: 0px;
     }
 
     nav{
@@ -116,6 +116,7 @@ header{
     border-style: solid;
     background-color: rgba(186, 193, 250, 0.47);
     margin-right: 20px;
+    height: inherit;
 }
     /* -----------------------------------
     / Below is contained within my Section: sectionBio 
