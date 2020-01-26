@@ -4,10 +4,11 @@
 var userName = prompt("Hello Friend, Welcome to my site!\n What is your name?");
 
 /* (LOOP) FORCE USERNAME */
-while ((userName === "") /*|| (userName === null)*/) {
+while (userName === "") {
     userName = prompt("Please, It would be nice to know your name...");
 }
 
+/* SETS USER NAME TO 'Invisible Man' IF USER CANCELS */
 if (userName === null){
     userName = 'Invisible Man';
 }
@@ -23,22 +24,15 @@ var correct = 0
 -----------------------------------------------------*/
 function questOne() {
     var question1 = prompt("QUESTION 1:\n Cassy has NEVER seen a Marvel Movie");
-    console.log("Question1: Cassy has NEVER seen a Marvel Movie");
 
-    /* While Loop - Forces - NO BLANKS & NO CANCEL */
-    while ((question1 === "") /*|| (question1 === null)*/) {
+    /* While Loop - Forces - NO BLANKS */
+    while (question1 === "") {
         question1 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy has NEVER seen a Marvel Movie");
     }
 
-    if (question1 === null){
-        userName = 'Invisible Man';
-    }
-
     if ((question1 === null) || (question1.toLowerCase() === 'yes') || (question1.toLowerCase() === 'true')) {
-        console.log("Answer1: WRONG");
         alert("WRONG!\n She's seen ALL the movies!");
     } else if ((question1.toLowerCase() === 'no') || (question1.toLowerCase() === 'false')) {
-        console.log("Answer1: CORRECT");
         alert("CORRECT!\n She has seen ALL the Marvel Movies in true Chronilogical Order 2x! (She's obsessed!)");
         correct++;
     } else {
@@ -54,17 +48,14 @@ questOne();
 
 function questTwo() {
     var question2 = prompt("QUESTION 2:\n Cassy once won a Car!");
-    console.log("Question2: Cassy once won a Car!");
 
-    while ((question2 === "") /*|| (question2 === null)*/) {
+    while (question2 === "") {
         question2 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy once won a Car!");
     }
 
     if ((question2 === null) || (question2.toLowerCase() === 'no') || (question2.toLowerCase() === 'false')) {
-        console.log("Answer2: WRONG");
         alert("WRONG!\n She won a car at her post prom party.");
     } else if ((question2.toLowerCase() === 'yes') || (question2.toLowerCase() === 'true')) {
-        console.log("Answer2: CORRECT");
         alert("CORRECT!\n She won a car at her post prom party.  Nothing Special, a used Ford Tempo - but still it was FREE!");
         correct++;
     } else {
@@ -79,18 +70,15 @@ questTwo();
 
 function questThree() {
     var question3 = prompt("QUESTION 3:\n Cassy was once arrested for public intoxication in college.");
-    console.log("Question3: Cassy was once arrested for public intoxication in college.");
 
-    while ((question3 === "") /*|| (question3 === null)*/) {
+    while (question3 === "") {
         question3 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once arrested for public intoxication in college.");
     }
 
     if ((question3 === null) || (question3.toLowerCase() === 'yes') || (question3.toLowerCase() === 'true')) {
-        console.log("Answer3: WRONG");
         alert("WRONG!\n She may be a little wild at times, but she has never been arrested!");
 
     } else if ((question3.toLowerCase() === 'no') || (question3.toLowerCase() === 'false')) {
-        console.log("Answer3: CORRECT");
         alert("CORRECT!\n She may be a little wild at times, but she has never been arrested!");
         correct++;
     } else {
@@ -105,17 +93,14 @@ questThree();
 
 function questFour() {
     var question4 = prompt("QUESTION 4:\n Cassy was once stuck in an elevator for 4-1/2 hours.");
-    console.log("Question4: Cassy was once stuck in an elevator for 4-1/2 hours.");
 
-    while ((question4 === "") /*|| (question4 === null)*/) {
+    while (question4 === "") {
         question4 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy was once stuck in an elevator for 4-1/2 hours.");
     }
 
     if ((question4 === null) || (question4.toLowerCase() === 'yes') || (question4.toLowerCase() === 'true')) {
-        console.log("Answer4: WRONG");
         alert("WRONG!\n That has never happened to her.");
     } else if ((question4.toLowerCase() === 'no') || (question4.toLowerCase() === 'false')) {
-        console.log("Answer4: CORRECT");
         alert("CORRECT!\n She's had bad days, but not that bad!!");
         correct++;
     } else {
@@ -130,18 +115,14 @@ questFour();
 
 function questFive() {
     var question5 = prompt("QUESTION 5:\n Cassy gets her kicks out of scaring people.");
-    console.log("Question5: Cassy gets her kicks out of scaring people.");
 
-    while ((question5 === "") /*|| (question5 === null)*/) {
+    while (question5 === "") {
         question5 = prompt("Please answer 'yes/no' or 'true/false'\n Cassy gets her kicks out of scaring people.");
     }
 
-
     if ((question5 === null) || (question5.toLowerCase() === 'no') || (question5.toLowerCase() === 'false')) {
-        console.log("Answer5: WRONG");
         alert("WRONG!\n Making people scream brings her joy!");
     } else if ((question5.toLowerCase() === 'yes') || (question5.toLowerCase() === 'true')) {
-        console.log("Answer5: CORRECT");
         alert("CORRECT!\n She loves to jump out and scare her husband and kids!");
         correct++;
     } else {
@@ -157,7 +138,6 @@ questFive();
 
 function questSix() {
     var response;
-    console.log("Question6: How many cousins does Cassy have?");
     var result;
 
     /* Loops through attempts (4) */
@@ -186,8 +166,6 @@ function questSix() {
             break;
         }
     }
-
-    console.log("Answer6: " + result);
 }
 
 questSix();
@@ -201,16 +179,13 @@ function questSeven() {
     var a = 0; /* index of User guess Array */
     var nameResult = ""; /* Note for Console Log - can be commented out */
 
-    console.log("Index Length: " + siblings.length);
-
     /* Loops through the Number of Attempts Required  (6) */
     for (var y = 1; y < 7; y++) {
-        console.log("ATTEMPT #" + y);
 
         var guessName = prompt("QUESTION7 | ATTEMPT #" + y + " of 6 :\n\n I have 12 big brothers, can you guess any of their names?");
 
         /* Force the user to answer the question - NO Blanks/Cancels */
-        while ((guessName === "") /*|| (guessName === null)*/) {
+        while (guessName === "") {
             guessName = prompt("Please submit an answer: \n Cassy has 12 big brothers, can you guess any of their names?");
         }
 
@@ -223,7 +198,6 @@ function questSeven() {
         /* Enters Users answer into the usersEntries Array - create console log */
         usersEntries[a] = guessName;
         a++;
-        console.log("User Guessed: " + guessName);
 
         /* If it's the 6th attempt, then alerts User and breaks code */
         if (y === 6) {
@@ -252,8 +226,6 @@ function questSeven() {
             alert("Nope Sorry, that is not correct! You now have: " + (6 - y) + " attempts left!");
         }
     }
-
-    console.log("Result: " + nameResult);
 }
 
 questSeven();
